@@ -1,9 +1,10 @@
 ﻿using Entities.Models;
 using Microsoft.EntityFrameworkCore;
- 
-using WebApi.Repositeries.Config;
+using Repositories.EFCore.Config;
+using System.Collections.Generic;
+using System.Reflection.Emit;
 
-namespace WebApi.Repositories
+namespace Repositories.EFCore
 {
     public class RepositoryContext : DbContext
     {
@@ -15,6 +16,6 @@ namespace WebApi.Repositories
         {
             modelBuilder.ApplyConfiguration(new BookConfig());
         }
-        public DbSet<Book> Books { get; set; }  
+        public DbSet<Book> Books { get; set; }
     }
 }
