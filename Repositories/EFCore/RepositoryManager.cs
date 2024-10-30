@@ -12,13 +12,15 @@ namespace Repositories.EFCore
     {
 
         private readonly RepositoryContext _context;
+        private readonly Lazy<IBookRepository> _bookRepository;
 
         public RepositoryManager(RepositoryContext repositoryContext)
         {
             _context = repositoryContext;
+            _bookRepository= new Lazy<IBookRepository>(() => new BookRepository(_context));
         }
 
-        public IBookRepository Book => new BookRepository(_context);
+        public IBookRepository Book => _bookRepository.Value;
 
         public void Save()
         {
