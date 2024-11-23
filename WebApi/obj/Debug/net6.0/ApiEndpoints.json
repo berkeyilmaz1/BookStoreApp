@@ -1,6 +1,6 @@
 [
   {
-    "ContainingType": "WebApi.Controllers.BooksController",
+    "ContainingType": "Presentation.Controllers.BooksController",
     "Method": "GetAllBooks",
     "RelativePath": "api/books",
     "HttpMethod": "GET",
@@ -10,7 +10,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WebApi.Controllers.BooksController",
+    "ContainingType": "Presentation.Controllers.BooksController",
     "Method": "CreateOneBook",
     "RelativePath": "api/books",
     "HttpMethod": "POST",
@@ -26,7 +26,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WebApi.Controllers.BooksController",
+    "ContainingType": "Presentation.Controllers.BooksController",
     "Method": "GetOneBook",
     "RelativePath": "api/books/{id}",
     "HttpMethod": "GET",
@@ -42,7 +42,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WebApi.Controllers.BooksController",
+    "ContainingType": "Presentation.Controllers.BooksController",
     "Method": "UpdateOneBook",
     "RelativePath": "api/books/{id}",
     "HttpMethod": "PUT",
@@ -63,7 +63,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WebApi.Controllers.BooksController",
+    "ContainingType": "Presentation.Controllers.BooksController",
     "Method": "DeleteOneBook",
     "RelativePath": "api/books/{id}",
     "HttpMethod": "DELETE",

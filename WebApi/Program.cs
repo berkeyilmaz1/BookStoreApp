@@ -1,17 +1,22 @@
 using Microsoft.EntityFrameworkCore;
+using NLog;
 using Repositories.EFCore;
+using WebApi.Extensions;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
+LogManager.LoadConfiguration(String.Concat(Directory.GetCurrentDirectory(), "/nlog.config"));
+
 // Add services to the container.
- 
-builder.Services.AddControllers();
+
+builder.Services.AddControllers().AddApplicationPart(typeof(Presentation.AssemblyReference).Assembly);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<RepositoryContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("sqlConnection"))
-);
+builder.Services.ConfigureSqlContext(builder.Configuration);
+builder.Services.ConfigureRepositoryManager();
+builder.Services.ConfigureServiceManager();
+builder.Services.ConfigureLoggerService();
 
 
 
