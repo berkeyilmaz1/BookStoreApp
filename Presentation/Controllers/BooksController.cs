@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Entities.Exceptions.NotFoundException;
 
 namespace Presentation.Controllers
 {
@@ -24,61 +25,31 @@ namespace Presentation.Controllers
         [HttpGet]
         public IActionResult GetAllBooks()
         {
-            try
-            {
-                var books = _manager.BookServices.GetAllBooks(false);
-                return Ok(books);
-            }
-            catch (Exception ex)
-            {
-
-                throw new Exception(ex.Message);
-            }
-
+            var books = _manager.BookServices.GetAllBooks(false);
+            return Ok(books);
         }
 
         [HttpGet("{id:int}")]
         public IActionResult GetOneBook([FromRoute(Name = "id")] int id)
         {
 
-            try
-            {
-                var book = _manager.BookServices.GetOneBookById(id, false);
-
-                if (book is null)
-                {
-                    return NotFound(); ///404
-                }
-                return Ok(book);
-            }
-            catch (Exception ex)
-            {
-
-                throw new Exception(ex.Message);
-            }
-
-
+            var book = _manager.BookServices.GetOneBookById(id, false);
+            
+            
+            return Ok(book);
         }
 
 
         [HttpPost]
         public IActionResult CreateOneBook([FromBody] Book book)
         {
-            try
+            if (book is null)
             {
-                if (book is null)
-                {
-                    return BadRequest(); ///404
-                }
-                _manager.BookServices.CreateOneBook(book);
-
-                return StatusCode(201, book);
+                return BadRequest(); ///404
             }
-            catch (Exception ex)
-            {
+            _manager.BookServices.CreateOneBook(book);
+            return StatusCode(201, book);
 
-                return BadRequest(ex.Message);
-            }
         }
 
 
@@ -86,20 +57,13 @@ namespace Presentation.Controllers
         [HttpPut("{id:int}")]
         public IActionResult UpdateOneBook([FromRoute(Name = "id")] int id, [FromBody] Book book)
         {
-            try
+            if (book is null)
             {
-                if (book is null)
-                {
-                    return BadRequest();
-                }
-                _manager.BookServices.UpdateOneBook(id, book, true);
-                return NoContent();//204
+                return BadRequest();
             }
-            catch (Exception ex)
-            {
+            _manager.BookServices.UpdateOneBook(id, book, true);
+            return NoContent();//204
 
-                throw new Exception(ex.Message);
-            }
         }
 
 
@@ -109,8 +73,6 @@ namespace Presentation.Controllers
         public IActionResult DeleteOneBook([FromRoute(Name = "id")] int id)
         {
             var entity = _manager.BookServices.GetOneBookById(id, false);
-
-
             if (entity is null) return NotFound(new
             {
                 statusCode = 404,
