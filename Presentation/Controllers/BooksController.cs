@@ -1,4 +1,5 @@
-﻿using Entities.Models;
+﻿using Entities.DataTransferObjects;
+using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 using Services.Contracts;
 using System;
@@ -34,8 +35,8 @@ namespace Presentation.Controllers
         {
 
             var book = _manager.BookServices.GetOneBookById(id, false);
-            
-            
+
+
             return Ok(book);
         }
 
@@ -55,13 +56,13 @@ namespace Presentation.Controllers
 
 
         [HttpPut("{id:int}")]
-        public IActionResult UpdateOneBook([FromRoute(Name = "id")] int id, [FromBody] Book book)
+        public IActionResult UpdateOneBook([FromRoute(Name = "id")] int id, [FromBody] BookDTtoForUpdate bookDto)
         {
             if (book is null)
             {
                 return BadRequest();
             }
-            _manager.BookServices.UpdateOneBook(id, book, true);
+            _manager.BookServices.UpdateOneBook(id, bookDto, true);
             return NoContent();//204
 
         }
