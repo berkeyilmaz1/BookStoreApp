@@ -6,5 +6,6 @@ using System.Threading.Tasks;
 
 namespace Entities.DataTransferObjects
 {
-    public record BookDTtoForUpdate(int Id, String Title, decimal Price);
+    public record BookDToForUpdate(int Id, String Title, decimal Price);
+
 }

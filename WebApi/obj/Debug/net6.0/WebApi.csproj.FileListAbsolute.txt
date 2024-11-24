@@ -82,3 +82,5 @@ C:\Users\pc\Desktop\Development\csharp\bsStoreApp\WebApi\bin\Debug\net6.0\Presen
 C:\Users\pc\Desktop\Development\csharp\bsStoreApp\WebApi\bin\Debug\net6.0\nlog.config
 C:\Users\pc\Desktop\Development\csharp\bsStoreApp\WebApi\bin\Debug\net6.0\NLog.dll
 C:\Users\pc\Desktop\Development\csharp\bsStoreApp\WebApi\bin\Debug\net6.0\NLog.Extensions.Logging.dll
+C:\Users\pc\Desktop\Development\csharp\bsStoreApp\WebApi\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\pc\Desktop\Development\csharp\bsStoreApp\WebApi\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

@@ -30,35 +30,26 @@ namespace Services
 
         public void DeleteOneBook(int id, bool trackChanges)
         {
-            var entity = _manager.Book.GetOneBookById(id, trackChanges);
-            if (entity is null)
-            {
-                throw new BookNotFoundException(id);
-            }
+            var entity = _manager.Book.GetOneBookById(id, trackChanges) ?? throw new BookNotFoundException(id);
             _manager.Book.DeleteOneBook(entity);
             _manager.Save();
         }
 
-        public IEnumerable<Book> GetAllBooks(bool trackChanges)
+        public IEnumerable<BookDto> GetAllBooks(bool trackChanges)
         {
-            return _manager.Book.GetAllBooks(trackChanges);
+            var books = _manager.Book.GetAllBooks(trackChanges);
+            return _mapper.Map<IEnumerable<BookDto>>(books);
         }
 
         public Book GetOneBookById(int id, bool trackChanges)
         {
             var book = _manager.Book.GetOneBookById(id, trackChanges);
-            if (book is null) throw new BookNotFoundException(id);
-            return book;
+            return book is null ? throw new BookNotFoundException(id) : book;
         }
 
-        public void UpdateOneBook(int id, BookDTtoForUpdate bookDto, bool trackChanges)
+        public void UpdateOneBook(int id, BookDToForUpdate bookDto, bool trackChanges)
         {
-            var entity = _manager.Book.GetOneBookById(id, trackChanges);
-            if (entity is null)
-            {
-                throw new BookNotFoundException(id);
-            }
-
+            var entity = _manager.Book.GetOneBookById(id, trackChanges) ?? throw new BookNotFoundException(id);
             entity = _mapper.Map<Book>(bookDto);
             _manager.Book.Update(entity);
             _manager.Save();
