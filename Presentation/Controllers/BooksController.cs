@@ -42,13 +42,14 @@ namespace Presentation.Controllers
 
 
         [HttpPost]
-        public IActionResult CreateOneBook([FromBody] Book book)
+        public IActionResult CreateOneBook([FromBody] BookDtoForInsertion bookDto)
         {
-            if (book is null)
+            if (bookDto is null)
             {
                 return BadRequest(); ///404
             }
-            _manager.BookServices.CreateOneBook(book);
+            if (!ModelState.IsValid) return UnprocessableEntity(ModelState);
+            var book = _manager.BookServices.CreateOneBook(bookDto);
             return StatusCode(201, book);
 
         }
@@ -62,7 +63,8 @@ namespace Presentation.Controllers
             {
                 return BadRequest();
             }
-            _manager.BookServices.UpdateOneBook(id, bookDto, true);
+            if (!ModelState.IsValid) return UnprocessableEntity(ModelState);
+            _manager.BookServices.UpdateOneBook(id, bookDto, false);
             return NoContent();//204
 
         }

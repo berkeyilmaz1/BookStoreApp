@@ -44,3 +44,37 @@
 2024-11-24 15:25:08.8007 Info Configuration initialized.
 2024-11-24 15:29:49.9357 Info AppDomain Shutting down. LogFactory closing...
 2024-11-24 15:29:50.0359 Info LogFactory has been closed.
+2024-11-26 11:24:11.6362 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-11-26 11:24:11.6573 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-11-26 11:24:11.6838 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\pc\Desktop\Development\csharp\bsStoreApp\WebApi\nlog.config
+2024-11-26 11:24:11.6990 Info Configuration initialized.
+2024-11-26 11:24:54.8445 Info AppDomain Shutting down. LogFactory closing...
+2024-11-26 11:24:54.8818 Info LogFactory has been closed.
+2024-11-26 11:27:28.2296 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-11-26 11:27:28.2491 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-11-26 11:27:28.2682 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\pc\Desktop\Development\csharp\bsStoreApp\WebApi\nlog.config
+2024-11-26 11:27:28.2816 Info Configuration initialized.
+2024-11-26 11:28:46.8506 Info AppDomain Shutting down. LogFactory closing...
+2024-11-26 11:28:46.8506 Info LogFactory has been closed.
+2024-11-26 11:28:52.2742 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-11-26 11:28:52.3087 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-11-26 11:28:52.3425 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\pc\Desktop\Development\csharp\bsStoreApp\WebApi\nlog.config
+2024-11-26 11:28:52.3697 Info Configuration initialized.
+2024-11-26 11:31:31.9887 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-11-26 11:31:32.0094 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-11-26 11:31:32.0394 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\pc\Desktop\Development\csharp\bsStoreApp\WebApi\nlog.config
+2024-11-26 11:31:32.0581 Info Configuration initialized.
+2024-11-26 11:32:04.2266 Info AppDomain Shutting down. LogFactory closing...
+2024-11-26 11:32:04.2576 Info LogFactory has been closed.
+2024-11-26 11:33:34.2062 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-11-26 11:33:34.2261 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-11-26 11:33:34.2506 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\pc\Desktop\Development\csharp\bsStoreApp\WebApi\nlog.config
+2024-11-26 11:33:34.2765 Info Configuration initialized.
+2024-11-26 11:34:31.7315 Info AppDomain Shutting down. LogFactory closing...
+2024-11-26 11:34:31.7477 Info LogFactory has been closed.
+2024-11-26 11:35:49.4980 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-11-26 11:35:49.5278 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-11-26 11:35:49.5468 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\pc\Desktop\Development\csharp\bsStoreApp\WebApi\nlog.config
+2024-11-26 11:35:49.5622 Info Configuration initialized.
+2024-11-26 11:36:42.4497 Info AppDomain Shutting down. LogFactory closing...
+2024-11-26 11:36:42.4750 Info LogFactory has been closed.
